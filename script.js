@@ -1,6 +1,7 @@
-function calculateVariance() {
-	var target = document.getElementById("target").value;
-	var actual = document.getElementById("actual").value;
-	var variance = ((actual - target) / target) * 100;
-	document.getElementById("result").innerHTML = "Variance: " + variance.toFixed(2) + "%";
+function calculate() {
+    let target = parseInt(document.getElementById("target").value);
+    let actual = parseInt(document.getElementById("actual").value);
+    let percentage = Math.round((actual / target) * 100);
+    let result = document.getElementById("result");
+    result.innerHTML = `Achievement: ${percentage}%`;
 }
